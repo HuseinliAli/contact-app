@@ -13,7 +13,11 @@ const Contact = () => {
   }, [contacts]);
 
   return (
-    <div>
+    <div
+      className="container w-25 bg-dark text-light p-2 mt-2"
+      style={{ borderRadius: "0.5rem" }}
+    >
+      <h2 className="text-center m-4 ">Contact App</h2>
       <Form addContact={setContacts} contacts={contacts} />
       <List contactList={contactsData ? contactsData : contacts} />
     </div>

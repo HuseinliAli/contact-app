@@ -22,9 +22,10 @@ const Form = ({ addContact, contacts }) => {
     }
   }, []);
   return (
-    <form onSubmit={onSubmit}>
-      <div>
+    <form onSubmit={onSubmit} className="">
+      <div className="p-2">
         <input
+          className="w-100 p-1 rounded"
           name="name"
           type="text"
           placeholder="Enter contact name"
@@ -32,8 +33,9 @@ const Form = ({ addContact, contacts }) => {
           value={form.name}
         />
       </div>
-      <div>
+      <div className="p-2">
         <input
+          className="w-100 p-1 rounded"
           name="phone"
           type="text"
           placeholder="Enter phone number"
@@ -41,8 +43,8 @@ const Form = ({ addContact, contacts }) => {
           value={form.phone}
         />
       </div>
-      <div>
-        <button>Add</button>
+      <div className="p-2">
+        <button className="w-100 btn btn-success">Add</button>
       </div>
     </form>
   );
